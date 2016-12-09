@@ -733,10 +733,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.supernova-at.MyAmerica";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.supernova-at.KTUD2ACZME";
 				PRODUCT_NAME = MyAmerica;
-				PROVISIONING_PROFILE = "0d63106c-c62d-4369-bb66-d33bc4eb685e";
-				PROVISIONING_PROFILE_SPECIFIER = "MyAmerica-Dev";
+				PROVISIONING_PROFILE = "db8f0c0e-aee2-4813-9b25-04e284915c4b";
+				PROVISIONING_PROFILE_SPECIFIER = "Our USA (Dev)";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -746,7 +746,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KTUD2ACZME;
 				HEADER_SEARCH_PATHS = (
@@ -761,10 +761,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.supernova-at.MyAmerica";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.supernova-at.KTUD2ACZME";
 				PRODUCT_NAME = MyAmerica;
-				PROVISIONING_PROFILE = "0d63106c-c62d-4369-bb66-d33bc4eb685e";
-				PROVISIONING_PROFILE_SPECIFIER = "MyAmerica-Dev";
+				PROVISIONING_PROFILE = "76a06376-91a0-4845-8a83-35b9680f5686";
+				PROVISIONING_PROFILE_SPECIFIER = "Our USA (Prod)";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
