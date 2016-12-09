@@ -22,7 +22,7 @@ export default class InfoRow extends React.Component {
             return Linking.openURL(phone);
           })
           .catch((err) => {
-
+            // purposefully do nothing.
           });
         }}>
         <Text style={styles.text}>
