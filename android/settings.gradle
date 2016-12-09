@@ -1,3 +1,5 @@
 rootProject.name = 'MyAmerica'
 
 include ':app'
+include ':react-native-flurry-analytics'
+project(':react-native-flurry-analytics').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-flurry-analytics/android')

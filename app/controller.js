@@ -5,13 +5,23 @@ import {
   View
 } from 'react-native';
 
+import packageJSON from '../package.json';
+
 // APIs.
 import CivicAPI from './api/googleCivic.js';
 import Geolocation from './api/geolocation.js';
 import ReverseGeo from './api/googleGeolocation.js';
 
+// Analytics.
+import Flurry from 'react-native-flurry-analytics';
+
 // Screens.
 import * as Screens from './screens/index.js';
+
+/*
+ * Members.
+ */
+const FLURRY_API_KEY = '<API_KEY>';
 
 const Routes = {
   Main: { id: 'Main', screenType: Screens.Reps },
@@ -62,10 +72,12 @@ export default class Controller extends React.Component {
       });
     })
     .catch((error) => {
-      // TODO: send analytics event.
       this.setState({
         isLoading: false
       });
+
+      // Send an analytics event.
+      Flurry.logEvent('Failed to retrieve data.', { error: error });
     });
   }
 
@@ -84,6 +96,12 @@ export default class Controller extends React.Component {
    * React Lifecycle Functions.
    */
   componentDidMount () {
+    // Flurry setup.
+    Flurry.setAppVersion(packageJSON.version);
+    Flurry.setCrashReportingEnabled(true);
+    Flurry.setEventLoggingEnabled(true);
+    Flurry.startSession(FLURRY_API_KEY);
+
     // The first time the component mounts, go get data.
     this.refreshData();
   }

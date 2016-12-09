@@ -64,3 +64,12 @@
 -dontwarn java.nio.file.*
 -dontwarn org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
 -dontwarn okio.**
+
+# flurry
+
+-keep class com.flurry.** { *; }
+-dontwarn com.flurry.**
+-keepattributes *Annotation*,EnclosingMethod,Signature
+-keepclasseswithmembers class * {
+    public (android.content.Context, android.util.AttributeSet, int);
+}
