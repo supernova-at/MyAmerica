@@ -14,13 +14,6 @@ import GenericSenate from '../images/senate.png';
 
 const UNKNOWN_NAME = '';
 
-function securePhotoUrl(url) {
-  // iOS requires https.
-  if (url) {
-    return url.replace('http://', 'https://');
-  }
-}
-
 export default class Representative extends React.Component {
   static displayName = 'Representative';
 
@@ -116,7 +109,7 @@ export default class Representative extends React.Component {
     }
     else {
       name = this.props.person.name;
-      photoUrl = securePhotoUrl(this.props.person.photoUrl);
+      photoUrl = this.props.person.photoUrl;
       button = this.renderCallButton();
       onPress = this.showDetails;
     }
@@ -126,7 +119,7 @@ export default class Representative extends React.Component {
       <View style={styles.component}>
         <View style={styles.container}>
           <TouchableHighlight onPress={onPress}>
-            <Image style={styles.image} source={bgImage}>
+            <Image style={styles.squareImage} source={bgImage}>
               <Image style={styles.image} source={{uri: photoUrl}} />
             </Image>
           </TouchableHighlight>
@@ -151,23 +144,33 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderColor: 'black',
     borderWidth: 2,
+    borderRadius: 15,
   },
   container: {
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'space-around',
     alignItems: 'center',
-    paddingTop: 10,
+    paddingTop: 15,
+  },
+  squareImage: {
+    width: 100,
+    height: 100,
+    borderRadius: 15,
   },
   image: {
     width: 100,
-    height: 100,
+    height: 115,
+    borderRadius: 15,
   },
   name: {
     marginLeft: 5,
     marginRight: 5,
+    marginTop: 10,
     textAlign: 'center',
     fontSize: 14,
     fontWeight: 'bold',
   },
+  call: {
+  }
 });

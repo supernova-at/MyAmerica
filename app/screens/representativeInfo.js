@@ -90,7 +90,7 @@ export default class RepInfo extends React.Component {
             }}
           />
         </View>
-        <Heading text='My America' style={styles.heading} />
+        <Heading text='Our USA' style={styles.heading} />
       </View>
     );
   }

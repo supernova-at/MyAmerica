@@ -83,7 +83,7 @@ export default class InfoRow extends React.Component {
       <View style={styles.row}>
         <View style={styles.leftCell}>
           <Text style={styles.text}>
-            { this.props.title }:
+            { this.props.title }
           </Text>
         </View>
         <View style={styles.rightCell}>
@@ -108,6 +108,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     borderBottomWidth: 1,
     borderColor: 'white',
+    paddingBottom: 5,
   },
   rightCell: {
     flex: 3,
@@ -116,6 +117,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderColor: 'white',
     paddingLeft: 20,
+    paddingBottom: 5,
   },
   text: {
     color: 'white',
