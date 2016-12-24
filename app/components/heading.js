@@ -51,6 +51,9 @@ const styles = StyleSheet.create({
     textShadowRadius: 1,
     marginLeft: 3,
     marginRight: 3,
+
+    /* Needed for Android */
+    textAlignVertical: 'center',
   },
   star: {
     color: 'white',

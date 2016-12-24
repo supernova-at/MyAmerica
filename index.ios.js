@@ -1,5 +1,5 @@
 /**
- * My America React Native App
+ * Our USA React Native App
  * https://github.com/facebook/react-native
  */
 
